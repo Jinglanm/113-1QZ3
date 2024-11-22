@@ -55,7 +55,7 @@ public void mt_getResult(){
 
 1. 請參閱投影片Topic5的第31至35頁請用物件導向方式進行新增與刪除。 (請參照題目pdf)
 
-Ans:
+Ans:這個
 ``` py 
 def addNodeToStack(item:int, top:Node)->Node:
     x = Node()
