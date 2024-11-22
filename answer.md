@@ -55,7 +55,7 @@ public void mt_getResult(){
 
 1. 請參閱投影片Topic5的第31至35頁請用物件導向方式進行新增與刪除。 (請參照題目pdf)
 
-Ans:這個
+Ans:這個程式首先必須產生一個新資料item的新節點，假設此節點為x，其加入新資料項目到鏈結堆疊中的過程。
 ``` py 
 def addNodeToStack(item:int, top:Node)->Node:
     x = Node()
@@ -64,6 +64,7 @@ def addNodeToStack(item:int, top:Node)->Node:
     top = x
     return top
 ```
+刪除頂端資料時，必須利用一個指標指向頂端節點，以便在頂端指標Top改為指向第二個節點後，還能參照原來的頂端節點。
 ```py
 def delStack(top: Node) -> tuple[int, Node]:
     if top is None:
@@ -82,6 +83,7 @@ def addQueue(item,front,rear):
     rear = x
     return front, rear
 ```
+刪除鏈結佇列前端資料，如同刪除鏈結堆疊的頂端資料一樣，同樣必須先利用一個指標指向前端節點，然後改變前端指標front至下一個節點，最後歸還原來的前端節點空間給系統
 ```py
 def delQueue(front,rear):
     if front is None:
