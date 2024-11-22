@@ -56,7 +56,42 @@ public void mt_getResult(){
 1. 請參閱投影片Topic5的第31至35頁請用物件導向方式進行新增與刪除。 (請參照題目pdf)
 
 Ans:
-
+``` py 
+def addNodeToStack(item:int, top:Node)->Node:
+    x = Node()
+    x.data = item
+    x.link = top
+    top = x
+    return top
+```
+```py
+def delStack(top: Node) -> tuple[int, Node]:
+    if top is None:
+        raise Exception("STACK_EMPTY")
+    x = top
+    item = x.data
+    top = top.link
+    del x
+```
+```py  
+def addQueue(item,front,rear):
+    x = Node()
+    x.data = item
+    x.link = None
+    rear.link = x
+    rear = x
+    return front, rear
+```
+```py
+def delQueue(front,rear):
+    if front is None:
+        raise Exception("Queue_Empty")
+    else:
+        x = front
+        front = front.link
+        del x
+    return front,rear     
+```
 
 ## 個人認為完成作業須具備觀念
 
